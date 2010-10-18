@@ -1,0 +1,29 @@
+
+label:hover {
+	text-decoration: underline;
+}
+
+span.label.error {
+	color: red;
+}
+label.error {
+	color: red;
+}
+
+input.error {
+	color: inherit;
+	border-color: red;
+	background-color: #ffffd0;
+}
+textarea.error {
+	color: inherit;
+	border-color: red;
+	background-color: #ffffd0;
+}
+
+select.error {
+	color: inherit;
+	border-color: red;
+	background-color: #ffffd0;
+}
+

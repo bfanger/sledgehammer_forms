@@ -1,0 +1,12 @@
+<fieldset<?php echo $parameters;?>>
+<?php 
+if ($legend) {
+	echo "\t<legend>".$legend."</legend>\n";
+}
+foreach ($fields as $field) {
+	echo "\t<div>";
+	render($field);
+	echo "<div>\n";
+}
+?>
+</fieldset>
