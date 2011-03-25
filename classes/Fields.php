@@ -6,9 +6,9 @@
  * @package Forms
  */
 
-class Fields extends Object implements Component, Import{
+class Fields extends Object implements Component, Import, ArrayAccess {
 
-	public 
+	protected
 		$fields;
 
 	function __construct($fields = array()) {
@@ -39,6 +39,20 @@ class Fields extends Object implements Component, Import{
 		foreach ($this->fields as $field) {
 			$field->render();
 		}
+	}
+
+	//	ArrayAccess implementatie
+	function offsetExists($key) {
+		return array_key_exists($key, $this->fields);
+	}
+	function offsetGet($key) {
+		return $this->fields[$key];
+	}
+	function offsetSet($key, $value) {
+		$this->fields[$key] = $value;
+	}
+	function offsetUnset($key) {
+		unset($this->fields[$key]);
 	}
 }
 ?>
