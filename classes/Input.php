@@ -4,8 +4,8 @@
  * 
  * @package Forms
  */
-
-class Input extends Object implements Component, Import{
+namespace SledgeHammer;
+class Input extends Object implements Component, Import {
 
 	public 
 		$Validator,
@@ -85,13 +85,13 @@ class Input extends Object implements Component, Import{
 				$type = 'text';
 				$parameters['size'] = 5;
 				append_class_to_parameters('number', $parameters);
-				$Validator = new NumberValidator;
+				$Validator = new NumberValidator();
 				break;
 
 			case 'required text':
 				$type = 'text';
 				append_class_to_parameters('required', $parameters);
-				$Validator = new Validators(array(new NotEmptyValidator, new XSSValidator));
+				$Validator = new Validators(array(new NotEmptyValidator(), new XSSValidator()));
 				break;
 		}
 		return new Input($type, $name, $parameters, $Validator);

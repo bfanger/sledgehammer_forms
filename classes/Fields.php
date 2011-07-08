@@ -5,8 +5,8 @@
  *
  * @package Forms
  */
-
-class Fields extends Object implements Component, Import, ArrayAccess {
+namespace SledgeHammer;
+class Fields extends Object implements Component, Import, \ArrayAccess {
 
 	protected
 		$fields;

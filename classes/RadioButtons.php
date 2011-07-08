@@ -7,8 +7,8 @@
  *
  * @package Forms
  */
-
-class RadioButtons extends Object implements Component, Import{
+namespace SledgeHammer;
+class RadioButtons extends Object implements Component, Import {
 
 	public 
 		$Iterator,

@@ -5,7 +5,7 @@
  *
  * @package Forms
  */
-
+namespace SledgeHammer;
 class Fieldset extends Fields {
 
 	public 

@@ -5,7 +5,7 @@
  *
  * @package Forms
  */
-
+namespace SledgeHammer;
 interface Import {
 
 	/**

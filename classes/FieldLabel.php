@@ -4,8 +4,8 @@
  * 
  * @package Forms
  */
-
-class FieldLabel extends Object implements Component, Import{
+namespace SledgeHammer;
+class FieldLabel extends Object implements Component, Import {
 
 	public 
 		$label,

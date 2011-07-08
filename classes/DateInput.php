@@ -4,8 +4,8 @@
  * @todo: Een calender toevoegen (datepicker)
  * @package Forms
  */
-
-class DateInput extends Object implements Component, Import{
+namespace SledgeHammer;
+class DateInput extends Object implements Component, Import {
 
 	public 
 		$Validator,

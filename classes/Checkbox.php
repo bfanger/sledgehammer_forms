@@ -5,8 +5,8 @@
  *                Dankzij het 'hidden' veld kun je toch nagaan of het keuzevakje ook daadwerkelijk verstuurd is.
  * @package Forms
  */
-
-class Checkbox extends Object implements Component, Import{
+namespace SledgeHammer;
+class Checkbox extends Object implements Component, Import {
 
 	public 
 		$parameters,

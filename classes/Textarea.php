@@ -3,8 +3,8 @@
  * Een tekstvak <textarea>
  * @package Forms
  */
-
-class Textarea extends Object implements Component, Import{
+namespace SledgeHammer;
+class Textarea extends Object implements Component, Import {
 
 	public 
 		$Validator,

@@ -5,8 +5,8 @@
  * @todo Ondersteuning voor <optiongroup>
  * @package Forms
  */
-
-class SelectBox extends Object implements Component, Import{
+namespace SledgeHammer;
+class SelectBox extends Object implements Component, Import {
 
 	public 
 		$Iterator,

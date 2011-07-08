@@ -5,7 +5,7 @@
  * @todo Ondersteuning voor een multidimentionale identifier. name="foto[1]"
  * @package Forms
  */
-
+namespace SledgeHammer;
 class FileInput extends Input {
 
 	function __construct($name, $parameters = array(), $Validator = NULL) {
