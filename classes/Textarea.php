@@ -4,9 +4,9 @@
  * @package Forms
  */
 namespace SledgeHammer;
-class Textarea extends Object implements Component, Import {
+class Textarea extends Object implements View, Import {
 
-	public 
+	public
 		$Validator,
 		$parameters;
 
@@ -27,7 +27,7 @@ class Textarea extends Object implements Component, Import {
 
 	function import(&$error_message, $source = array()) {
 		if (!array_key_exists('name', $this->parameters)) {
-			return NULL; // De naam is niet opgegeven. 
+			return NULL; // De naam is niet opgegeven.
 		}
 		if (extract_element($source, $this->parameters['name'], $value)) {
 			$value = str_replace("\r\n", "\n", $value);

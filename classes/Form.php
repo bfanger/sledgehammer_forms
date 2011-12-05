@@ -5,7 +5,7 @@
  * @package Forms
  */
 namespace SledgeHammer;
-class Form extends Object implements Component, Import {
+class Form extends Object implements View, Import {
 
 	public
 		$Fieldsets;

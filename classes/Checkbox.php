@@ -1,14 +1,14 @@
 <?php
 /**
- * Omschrijving : Een component waarmee een checkbox/keuzevakje kunt genereren en importeren 
+ * Omschrijving : Een component waarmee een checkbox/keuzevakje kunt genereren en importeren
  * Opmerkingen  : Er word een extra 'hidden' input gegenereerd, omdat een leeg keuzevakje geen get/post variabele verstuurd.
  *                Dankzij het 'hidden' veld kun je toch nagaan of het keuzevakje ook daadwerkelijk verstuurd is.
  * @package Forms
  */
 namespace SledgeHammer;
-class Checkbox extends Object implements Component, Import {
+class Checkbox extends Object implements View, Import {
 
-	public 
+	public
 		$parameters,
 		$label;
 
@@ -35,7 +35,7 @@ class Checkbox extends Object implements Component, Import {
 
 	function import(&$error_message, $source = array()) {
 		if (!array_key_exists('name', $this->parameters)) {
-			return NULL; // De naam is niet opgegeven. 
+			return NULL; // De naam is niet opgegeven.
 		}
 		if (extract_element($source, $this->parameters['name'], $value)) {
 			if (isset($this->parameters['value'])) {

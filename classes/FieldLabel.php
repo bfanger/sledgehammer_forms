@@ -1,13 +1,13 @@
 <?php
 /**
  * Een component waarmee een invoerveld van een label wordt voorzien.
- * 
+ *
  * @package Forms
  */
 namespace SledgeHammer;
-class FieldLabel extends Object implements Component, Import {
+class FieldLabel extends Object implements View, Import {
 
-	public 
+	public
 		$label,
 		$Field,
 		$parameters;

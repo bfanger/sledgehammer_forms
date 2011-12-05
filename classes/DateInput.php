@@ -5,13 +5,13 @@
  * @package Forms
  */
 namespace SledgeHammer;
-class DateInput extends Object implements Component, Import {
+class DateInput extends Object implements View, Import {
 
-	public 
+	public
 		$Validator,
 		$parameters;
 
-	private 
+	private
 		$SelectBoxes,
 		$timestamp;
 

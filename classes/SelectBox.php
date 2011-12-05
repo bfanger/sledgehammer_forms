@@ -6,9 +6,9 @@
  * @package Forms
  */
 namespace SledgeHammer;
-class SelectBox extends Object implements Component, Import {
+class SelectBox extends Object implements View, Import {
 
-	public 
+	public
 		$Iterator,
 		$parameters, // xhtml parameters voor binnen de <select> tag
 		$Validator;
@@ -41,7 +41,7 @@ class SelectBox extends Object implements Component, Import {
 	}
 	function import(&$error_message, $source = array()) {
 		if (!array_key_exists('name', $this->parameters)) {
-			return NULL; // De naam is niet opgegeven. 
+			return NULL; // De naam is niet opgegeven.
 		}
 		if (extract_element($source, $this->parameters['name'], $value)) {
 			if ($value == $this->empty_flag) {

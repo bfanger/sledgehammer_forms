@@ -1,13 +1,13 @@
 <?php
 /**
  * Een component waarmee <input> tags kunt genereren en importeren
- * 
+ *
  * @package Forms
  */
 namespace SledgeHammer;
-class Input extends Object implements Component, Import {
+class Input extends Object implements View, Import {
 
-	public 
+	public
 		$Validator,
 		$parameters;
 
@@ -23,7 +23,7 @@ class Input extends Object implements Component, Import {
 	/**
 	 * De <input value="*"> een waarde geven, zodat bij de eerste vertoning de waarde gevuld is.
 	 * Deze waarde zal worden overschreven zodra de import() is aangeroepen.
-	 * 
+	 *
 	 * @param string $value
 	 * @return void
 	 */
@@ -40,7 +40,7 @@ class Input extends Object implements Component, Import {
 	 */
 	function import(&$error_message, $source = array()) {
 		if (!array_key_exists('name', $this->parameters)) {
-			return NULL; // De naam is niet opgegeven. 
+			return NULL; // De naam is niet opgegeven.
 		}
 		if (extract_element($source, $this->parameters['name'], $value)) {
 			$this->parameters['value'] = str_replace('\"', '&quot;', $value);
