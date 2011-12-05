@@ -1,13 +1,13 @@
 <?php
 /**
  * Een webformulier
- * 
+ *
  * @package Forms
  */
 namespace SledgeHammer;
 class Form extends Object implements Component, Import {
 
-	public 
+	public
 		$Fieldsets;
 
 	private
@@ -20,7 +20,7 @@ class Form extends Object implements Component, Import {
 			$this->parameters['method'] = 'post';
 		}
 		if(empty($this->parameters['action'])) {
-			$this->parameters['action'] = URL::uri();
+			$this->parameters['action'] = URL::getCurrentURL();
 		}
 		$this->Fieldsets = $Fieldsets;
 	}
@@ -62,7 +62,7 @@ class Form extends Object implements Component, Import {
 		}
 		return $values;
 	}
-	
+
 	function render() {
 		echo '<form'.implode_xml_parameters($this->parameters).'>';
 		$fieldset_names = array_keys($this->Fieldsets);
