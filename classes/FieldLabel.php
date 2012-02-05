@@ -14,7 +14,7 @@ class FieldLabel extends Object implements View, Import {
 
 	function __construct($label, $Field, $parameters = array()) {
 		if (!array_key_exists('class', $parameters)) {
-			$parameters['class'] = 'label';
+			$parameters['class'] = 'form-label';
 		}
 		$this->label = $label;
 		$this->Field =	$Field;
